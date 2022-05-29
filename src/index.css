@@ -1,13 +1,113 @@
-body {
+/* 
+FONT
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Vollkorn:ital,wght@1,400;1,700&display=swap');
+
+/* 
+VARIABLES
+*/
+
+:root {
+  /* COLORS */
+  --primary-color: #5c5c5c;
+  --boxes: whitesmoke;
+  --hover-colors-1: #e3e1d3;
+  --hover-colors-2: #e0cece;
+  --hover-colors-3: #d1d7e0;
+  --additional-grey: #333;
+  --main-white: #fff;
+  --main-black: #000;
+  /* FONTS */
+  --primary-font: 'Montserrat', sans-serif;
+  --secondary-font: 'Vollkorn', sans-serif;
+  /* OTHERS */
+  --transition: all 0.5s ease;
+  --radius: 10px;
+  --spacing: 0.25rem;
+}
+/* 
+RESETTING
+*/
+*,
+::after,
+::before {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* 
+GLOBAL STYLES
+*/
+body {
+  background-color: var(--main-white);
+  color: var(--primary-color);
+  font-family: var(--primary-font);
+  font-size: 0.8rem;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+img:not(.logo) {
+  display: block;
+  width: 100%;
+}
+
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.5rem;
+}
+h4 {
+  font-size: 7rem;
+}
+
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  body {
+    font-size: 0.875rem;
+  }
+}
+
+/* MORE GLOBAL STYLES HERE */
+.section-layout {
+  padding: 1rem;
+}
+.section {
+  padding: 2rem 0;
+}
+.btn {
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 1.4rem 2rem;
+  transition: var(--transition);
+  font-size: 12px;
+  letter-spacing: -1pxl;
+  border: 2px solid var(--main-black);
+  margin-top: 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--additional-grey);
+}
+.btn:hover {
+  background-color: var(--primary-color);
+  color: var(--main-white);
 }
