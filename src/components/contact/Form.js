@@ -63,6 +63,9 @@ const Wrapper = styled.article`
   textarea:focus {
     border-color: #5584ca;
   }
+  textarea {
+    height: 5rem;
+  }
 `;
 
 export default Form;

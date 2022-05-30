@@ -60,5 +60,11 @@ const Wrapper = styled.footer`
       margin-bottom: 0;
     }
   }
+  @media screen and (min-width: 1200px) {
+    gap: 10rem;
+  }
+  @media screen and (min-width: 1400px) {
+    gap: 15rem;
+  }
 `;
 export default Footer;

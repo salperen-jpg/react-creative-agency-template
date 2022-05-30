@@ -21,7 +21,7 @@ VARIABLES
   --primary-font: 'Montserrat', sans-serif;
   --secondary-font: 'Vollkorn', sans-serif;
   /* OTHERS */
-  --transition: all 0.5s ease;
+  --transition: all 0.7s ease;
   --radius: 10px;
   --spacing: 0.25rem;
 }

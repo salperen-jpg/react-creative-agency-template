@@ -47,7 +47,7 @@ export const footerData = [
     ],
   },
   {
-    id: 1,
+    id: 3,
     spec: 'contact',
     others: [
       'E:info(at)youragency.com',
