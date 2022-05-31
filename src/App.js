@@ -6,6 +6,7 @@ import Meters from './components/meters/Meters';
 import Services from './components/services/Services';
 import Sidebar from './components/Sidebar';
 import Quotes from './components/quote/Quotes';
+import Gallery from './components/gallery/Gallery';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Services />
       <Quotes />
       <Contact />
+      <Gallery />
       <Footer />
       <Sidebar />
     </main>
