@@ -19,6 +19,7 @@ const Wrapper = styled.article`
   padding: 1rem;
   background-color: var(--boxes);
   margin-bottom: 1rem;
+  transition: var(--transition);
   img {
     width: 8rem;
     object-fit: cover;

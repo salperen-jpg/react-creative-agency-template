@@ -2,28 +2,69 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Form = () => {
+  const [formInputs, setFormInputs] = React.useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+  const [isLoading, setIsLoading] = React.useState(false);
+  const [buttonText, setButtonText] = React.useState('Submit');
+  const handleChange = (e) => {
+    setFormInputs({ ...formInputs, [e.target.name]: e.target.value });
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!formInputs.name || !formInputs.email || !formInputs.message) {
+    } else {
+      setButtonText('Please wait...');
+      setTimeout(() => {
+        setIsLoading(true);
+      }, 1000);
+    }
   };
   return (
     <Wrapper>
-      <form onSubmit={handleSubmit}>
-        <div className='form-action'>
-          <label htmlFor='name'>Name</label>
-          <input type='text' name='name' />
+      {isLoading ? (
+        <div className='after-form'>
+          {' '}
+          Thank you! Your submission has been received!
         </div>
-        <div className='form-action'>
-          <label htmlFor='email'>email address</label>
-          <input type='text' name='email' />
-        </div>
-        <div className='form-action'>
-          <label htmlFor='message'>email address</label>
-          <textarea name='message'></textarea>
-        </div>
-        <button type='submit' className='btn submit-btn'>
-          submit
-        </button>
-      </form>
+      ) : (
+        <form onSubmit={handleSubmit}>
+          <div className='form-action'>
+            <label htmlFor='name'>Name</label>
+            <input
+              type='text'
+              name='name'
+              value={formInputs.name}
+              required
+              onChange={handleChange}
+            />
+          </div>
+          <div className='form-action'>
+            <label htmlFor='email'>email address</label>
+            <input
+              type='text'
+              name='email'
+              value={formInputs.email}
+              required
+              onChange={handleChange}
+            />
+          </div>
+          <div className='form-action'>
+            <label htmlFor='message'>email address</label>
+            <textarea
+              name='message'
+              value={formInputs.message}
+              required
+              onChange={handleChange}
+            ></textarea>
+          </div>
+          <button type='submit' className='btn submit-btn'>
+            {buttonText}
+          </button>
+        </form>
+      )}
     </Wrapper>
   );
 };
@@ -65,6 +106,15 @@ const Wrapper = styled.article`
   }
   textarea {
     height: 5rem;
+  }
+  .after-form {
+    padding: 1rem;
+    width: min(100%, 50rem);
+    text-align: center;
+    background: #ddd;
+    color: var(--main-black);
+    margin-top: 2rem;
+    margin-bottom: 4rem;
   }
 `;
 

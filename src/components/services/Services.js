@@ -22,6 +22,16 @@ const Wrapper = styled.section`
     display: grid;
   }
 
+  .service:nth-child(1):hover {
+    background-color: #e3e1d3;
+  }
+  .service:nth-child(2):hover {
+    background-color: #e0cece;
+  }
+  .service:nth-child(3):hover {
+    background-color: #d1d7e0;
+  }
+
   @media screen and (min-width: 768px) {
     .service-types {
       grid-template-columns: repeat(3, 1fr);

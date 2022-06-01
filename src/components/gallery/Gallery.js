@@ -121,6 +121,9 @@ const Wrapper = styled.section`
       article:hover::after {
         background-color: rgba(0, 0, 0, 0.5);
       }
+      article:nth-child(1):hover::after {
+        background-color: var(--main-white);
+      }
     }
   }
 
@@ -142,7 +145,7 @@ const Wrapper = styled.section`
   }
   @media screen and (min-width: 1170px) {
     .gallery-image {
-      min-height: 23rem;
+      min-height: 27rem;
     }
   }
 `;
