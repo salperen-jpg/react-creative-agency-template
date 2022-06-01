@@ -2,7 +2,7 @@ export default [
   {
     id: 0,
     title: 'Latest creations',
-    small: 'e make beautiful things',
+    small: 'We make beautiful things',
     text: 'Focus infographic venture business model canvas gamification ecosystem. Business plan gamification user experience low hanging fruit twitter. Metrics research & development market paradigm shift growth hacking.',
     writable: true,
   },

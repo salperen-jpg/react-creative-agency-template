@@ -15,8 +15,8 @@ function App() {
       <Meters />
       <Services />
       <Quotes />
-      <Contact />
       <Gallery />
+      <Contact />
       <Footer />
       <Sidebar />
     </main>
