@@ -6,7 +6,7 @@ import ThingsWeDo from './ThingsWeDo';
 
 const Services = () => {
   return (
-    <Wrapper className='services'>
+    <Wrapper className='services' id='services'>
       <ThingsWeDo />
       <div className='service-types'>
         {data.map((single) => {

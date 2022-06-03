@@ -4,7 +4,7 @@ import data from './data';
 
 const Gallery = () => {
   return (
-    <Wrapper className='section'>
+    <Wrapper className='section' id='portfolio'>
       {data.map((single) => {
         const { id, title, small, text, writable, image } = single;
         if (writable) {
@@ -33,7 +33,7 @@ const Gallery = () => {
 const Wrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 1rem 1rem;
+  gap: 1rem;
   article {
     position: relative;
   }
@@ -57,7 +57,7 @@ const Wrapper = styled.section`
     align-items: center;
     justify-content: center;
     color: #fff;
-    border: 1px solid var(--main-white);
+    border: 1.4px solid var(--main-white);
     z-index: 2;
     transform: scale(0.9);
     transition: all 0.3s linear;
@@ -107,7 +107,8 @@ const Wrapper = styled.section`
         display: block;
         margin-top: 2rem;
         font-size: smaller;
-        line-height: 1.5;
+        line-height: 1.7;
+        max-width: 25rem;
       }
       article::after {
         content: '';

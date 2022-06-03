@@ -5,7 +5,7 @@ import Title from './Title';
 
 const Contact = () => {
   return (
-    <Wrapper className='section'>
+    <Wrapper className='section' id='contact'>
       <Title />
       <Form />
     </Wrapper>

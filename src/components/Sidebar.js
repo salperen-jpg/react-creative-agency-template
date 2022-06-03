@@ -16,7 +16,13 @@ const Sidebar = () => {
         <ul className='sidebar-links'>
           {links.map((link) => {
             const { id, path, text } = link;
-            return <li key={id}>{text}</li>;
+            return (
+              <li key={id}>
+                <a href={`#${path}`} onClick={closeSidebar}>
+                  {text}
+                </a>
+              </li>
+            );
           })}
         </ul>
       </div>

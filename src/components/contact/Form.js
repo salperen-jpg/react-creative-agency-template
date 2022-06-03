@@ -52,7 +52,7 @@ const Form = () => {
             />
           </div>
           <div className='form-action'>
-            <label htmlFor='message'>email address</label>
+            <label htmlFor='message'>Message</label>
             <textarea
               name='message'
               value={formInputs.message}

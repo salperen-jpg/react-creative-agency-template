@@ -6,7 +6,7 @@ import ImageContainer from './ImageContainer';
 
 const About = () => {
   return (
-    <Wrapper>
+    <Wrapper id='about'>
       <InfoContainer
         title='Creative 
         &Fresh'
