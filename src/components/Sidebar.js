@@ -56,7 +56,10 @@ const Wrapper = styled.aside`
     transition: var(--transition);
     color: var(--main-black);
   }
-  li:hover {
+  a {
+    color: var(--main-black);
+  }
+  a:hover {
     color: var(--primary-color);
   }
   &.show-sidebar {

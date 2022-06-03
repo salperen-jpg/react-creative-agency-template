@@ -8,7 +8,6 @@ import Sidebar from './components/Sidebar';
 import Quotes from './components/quote/Quotes';
 import Gallery from './components/gallery/Gallery';
 import Hero from './components/hero/Hero';
-import Navbar from './components/Navbar';
 
 function App() {
   return (
